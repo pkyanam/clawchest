@@ -11,6 +11,7 @@ export interface CartItem {
   image: string | undefined;
   priceId: string;
   quantity: number;
+  vendor?: string;
 }
 
 interface CartState {

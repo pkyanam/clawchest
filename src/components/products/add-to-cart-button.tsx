@@ -18,6 +18,7 @@ export function AddToCartButton({ product }: { product: Product }) {
       currency: product.currency,
       image: product.images[0],
       priceId: product.priceId,
+      vendor: product.vendor,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);

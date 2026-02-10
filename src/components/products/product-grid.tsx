@@ -7,7 +7,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
       <div className="text-center py-20">
         <p className="text-muted-foreground text-lg">No products yet</p>
         <p className="text-muted-foreground text-sm mt-2">
-          Add products in your Stripe Dashboard to get started.
+          Add products to get started.
         </p>
       </div>
     );
