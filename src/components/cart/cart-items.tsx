@@ -13,7 +13,7 @@ export function CartItems() {
 
   if (items.length === 0) {
     return (
-      <div className="text-center py-12">
+      <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 text-center py-12">
         <p className="text-muted-foreground">Your cart is empty</p>
       </div>
     );
@@ -24,7 +24,7 @@ export function CartItems() {
       {items.map((item) => (
         <div
           key={item.id}
-          className="flex gap-4 rounded-lg border p-4"
+          className="flex gap-4 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 p-4"
         >
           <div className="h-20 w-20 flex-shrink-0 rounded-md bg-muted overflow-hidden">
             {item.image ? (

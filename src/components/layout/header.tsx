@@ -4,7 +4,7 @@ import { CartIcon } from "@/components/cart/cart-icon";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-14 px-4">
         <MobileNav />
 

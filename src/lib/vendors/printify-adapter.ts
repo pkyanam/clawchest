@@ -26,7 +26,15 @@ function mapProduct(product: PrintifyProduct): Product | null {
 
 export class PrintifyAdapter implements VendorAdapter {
   async getProducts(): Promise<Product[]> {
-    const products = await getPrintify().getProducts();
+    const response = await getPrintify().getProducts();
+
+    // Handle both array and paginated response formats
+    const products = Array.isArray(response) ? response : (response as any).data || [];
+
+    if (!Array.isArray(products)) {
+      console.error("Unexpected Printify API response format:", response);
+      return [];
+    }
 
     return products
       .map(mapProduct)

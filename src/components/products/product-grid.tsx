@@ -4,7 +4,7 @@ import { ProductCard } from "./product-card";
 export function ProductGrid({ products }: { products: Product[] }) {
   if (products.length === 0) {
     return (
-      <div className="text-center py-20">
+      <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 text-center py-20 px-6">
         <p className="text-muted-foreground text-lg">No products yet</p>
         <p className="text-muted-foreground text-sm mt-2">
           Add products to get started.

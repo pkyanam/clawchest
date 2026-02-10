@@ -21,16 +21,18 @@ export default async function ProductPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <Link
-        href="/"
-        className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-6"
-      >
-        <ArrowLeft className="h-4 w-4 mr-1" />
-        Back to shop
-      </Link>
+      <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 p-4 mb-6 inline-block">
+        <Link
+          href="/"
+          className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4 mr-1" />
+          Back to shop
+        </Link>
+      </div>
 
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-        <div className="aspect-square bg-muted rounded-lg overflow-hidden">
+        <div className="aspect-square bg-white/95 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-gray-200/50">
           {product.images[0] ? (
             <Image
               src={product.images[0]}
@@ -47,7 +49,7 @@ export default async function ProductPage({
           )}
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 p-6">
           <h1 className="text-2xl font-bold">{product.name}</h1>
           <p className="text-xl mt-2">
             {formatPrice(product.price, product.currency)}

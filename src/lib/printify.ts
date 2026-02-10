@@ -117,7 +117,21 @@ export class PrintifyClient {
 
   async getProducts(): Promise<PrintifyProduct[]> {
     const shopId = await this.getShopId();
-    return this.request<PrintifyProduct[]>(`/shops/${shopId}/products.json`);
+    const response = await this.request<any>(`/shops/${shopId}/products.json`);
+
+    // Handle both paginated and direct array responses
+    if (Array.isArray(response)) {
+      return response;
+    }
+
+    // If it's a paginated response with a data property
+    if (response?.data && Array.isArray(response.data)) {
+      return response.data;
+    }
+
+    // If neither, return empty array
+    console.error("Unexpected Printify products response format:", response);
+    return [];
   }
 
   async getProduct(productId: string): Promise<PrintifyProduct | null> {

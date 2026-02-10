@@ -32,7 +32,7 @@ export function CartSummary() {
   }
 
   return (
-    <div className="rounded-lg border p-6">
+    <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 p-6">
       <h2 className="text-lg font-semibold">Order Summary</h2>
       <Separator className="my-4" />
       <div className="flex justify-between text-sm">

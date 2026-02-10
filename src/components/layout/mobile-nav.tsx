@@ -28,7 +28,7 @@ export function MobileNav() {
           <span className="sr-only">Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-64">
+      <SheetContent side="left" className="w-64 bg-white">
         <SheetHeader>
           <SheetTitle className="text-left">Clawchest</SheetTitle>
         </SheetHeader>
