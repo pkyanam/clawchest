@@ -49,7 +49,12 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // Retrieve the session with line items and shipping details
   const fullSession = await getStripe().checkout.sessions.retrieve(session.id, {
     expand: ["line_items", "line_items.data.price.product"],
-  });
+  }) as Stripe.Checkout.Session & {
+    shipping_details?: {
+      address?: Stripe.Address;
+      name?: string;
+    };
+  };
 
   if (!fullSession.line_items?.data || fullSession.line_items.data.length === 0) {
     console.log("No line items found");
@@ -73,7 +78,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     first_name: firstName,
     last_name: lastName,
     email: fullSession.customer_details?.email || "",
-    phone: shippingDetails.phone || "",
+    phone: fullSession.customer_details?.phone || "",
     country: address.country || "US",
     region: address.state || "",
     address1: address.line1 || "",
