@@ -39,6 +39,10 @@ export function CartSummary() {
         <span>Subtotal</span>
         <span className="font-medium">{formatPrice(totalPrice())}</span>
       </div>
+      <div className="flex justify-between text-sm mt-2 text-muted-foreground">
+        <span>Shipping</span>
+        <span>Calculated at checkout</span>
+      </div>
       <Separator className="my-4" />
       <Button
         className="w-full"

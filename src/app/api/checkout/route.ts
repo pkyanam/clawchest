@@ -67,6 +67,11 @@ export async function POST(req: Request) {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU", "DE", "FR", "ES", "IT", "NL", "SE", "NO", "DK", "FI"],
       },
+      shipping_options: [
+        {
+          shipping_rate: "shr_1SzDInEOVOAmVEbMIEvX6Vmn",
+        },
+      ],
       phone_number_collection: {
         enabled: true,
       },

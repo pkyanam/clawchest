@@ -30,7 +30,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-64 bg-white">
         <SheetHeader>
-          <SheetTitle className="text-left">Clawchest</SheetTitle>
+          <SheetTitle className="text-left">Clawchest Store</SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col gap-4 mt-6">
           {links.map((link) => (

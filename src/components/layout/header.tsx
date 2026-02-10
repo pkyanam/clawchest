@@ -12,7 +12,7 @@ export function Header() {
           href="/"
           className="absolute left-1/2 -translate-x-1/2 text-lg font-bold tracking-tight md:static md:translate-x-0"
         >
-          Clawchest
+          Clawchest Store
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 ml-8">

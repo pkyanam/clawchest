@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clawchest",
+  title: "Clawchest Store",
   description: "Merchandise & clothing store",
 };
 
